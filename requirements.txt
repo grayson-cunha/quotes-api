@@ -1,4 +1,4 @@
 flask
 flask-smorest
+flask-mongoengine
 python-dotenv
-flask_mongoengine
