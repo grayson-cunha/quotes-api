@@ -4,7 +4,7 @@ from flask_smorest import Blueprint, abort
 from schemas import CategorySchema, CategoryUpdateSchema
 from models import Categories
 
-blp = Blueprint("Categories", __name__, url_prefix="/categories", description="Operations on items")
+blp = Blueprint("Categories", __name__, url_prefix="/categories", description="Operations on categories")
 
 @blp.route("/")
 class CategoriesResource(MethodView):

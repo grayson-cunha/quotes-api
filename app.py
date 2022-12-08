@@ -3,6 +3,7 @@ from flask_smorest import Api
 from flask_mongoengine import MongoEngine
 
 from resources.category import blp as CategoriesBlueprint
+from resources.user import blp as UsersBlueprint
 
 def create_app(db_url=None):
   app = Flask(__name__)
@@ -25,5 +26,6 @@ def create_app(db_url=None):
   api = Api(app)
   
   api.register_blueprint(CategoriesBlueprint)
+  api.register_blueprint(UsersBlueprint)
   
   return app
