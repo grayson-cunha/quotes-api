@@ -4,6 +4,7 @@ from flask_mongoengine import MongoEngine
 
 from resources.category import blp as CategoriesBlueprint
 from resources.user import blp as UsersBlueprint
+from resources.quote import blp as QuotesBlueprint
 
 def create_app(db_url=None):
   app = Flask(__name__)
@@ -27,5 +28,6 @@ def create_app(db_url=None):
   
   api.register_blueprint(CategoriesBlueprint)
   api.register_blueprint(UsersBlueprint)
+  api.register_blueprint(QuotesBlueprint)
   
   return app

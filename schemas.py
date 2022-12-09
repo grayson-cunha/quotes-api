@@ -17,3 +17,11 @@ class UserSchema(Schema):
 class UserUpdateSchema(Schema):
   name = fields.Str()
   email = fields.Str()
+
+class QuoteSchema(Schema):
+  id = fields.Str(dump_only=True)
+  text = fields.Str()
+  user = fields.Str()
+
+class UpdateQuoteSchema(Schema):
+  text = fields.Str()

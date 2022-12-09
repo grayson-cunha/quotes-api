@@ -1,7 +1,7 @@
 import mongoengine as mongo
 import datetime
 
-class User(mongo.Document):
+class Users(mongo.Document):
   name = mongo.StringField()
   email = mongo.StringField()
   hash_password = mongo.StringField()
